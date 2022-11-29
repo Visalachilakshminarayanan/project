@@ -1,0 +1,84 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>contact</title>
+    <link rel="stylesheet" href="{% static 'css/mains.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+     <div class="menu">
+        <ul class="menulist">
+        <li><a href="home">Home</a></li>
+        <li><a href="about" >About</a></li>
+        <li><a href="home">Product</a></li>
+        <li><a href="contact">Contact</a></li>
+
+        </ul>
+        <img src="{% static 'images/new-logo.png' %}">
+         <h1>GVM EXPORTS</h1>
+    </div>
+
+        <div class="contacthead" >
+
+            <div class="tamilword">
+              <div class="heads">
+                <h1>Contact </h1>
+
+              </div>
+           </div>
+        </div>
+        <div class="contactbox">
+            <div class="cbox"  id="contactpage">
+               <img src="{% static 'images/j7.png' %}">
+               <div class="contact-content">
+                <h2>Call Us -(+91) 6380504818 - 6381212066</h2>
+               </div>
+            </div>
+            <div class="cbox">
+                <img src="{% static 'images/mail1.png' %}">
+                <div class="contact-content">
+                 <h2>gvignesh3798@gmail.com</h2>
+                </div>
+            </div>
+            <div class="cbox">
+                <img src="{% static 'images/loc.png' %}">
+                <div class="contact-content">
+                    <h2>Address: Rayakottai to dharmapuri road kaduchettipatti,
+                        Dharmapuri(dt),
+                        Tamilnadu 635116.
+                    </h2>
+                </div>
+            </div>
+        </div>
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1050827799355!2d78.02954547892774!3d12.46326483488009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac2c0dffc446a1%3A0x58263954899579b5!2sKaduchettipatti%2C%20Tamil%20Nadu%20635116!5e1!3m2!1sen!2sin!4v1660632622908!5m2!1sen!2sin" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="contactfrm">
+        <h1>SEND US A MESSAGE</h1>
+        <form method="POST">
+            {% csrf_token %}
+        <!--<div class="divfrm">
+           <input type="text" class="frmcls" placeholder="Name*" name=>
+        </div>
+        <div class="divfrm">
+            <input type="address" class="frmcls" placeholder="Address" name=>
+        </div>
+        <div class="divfrm">
+            <input type="number" class="frmcls" placeholder="Phone Number*" name=>
+        </div>
+        <div class="divfrm">
+            <textarea rows="6" cols="83" class="frmcls" placeholder="Comments*" name=></textarea>
+        </div>-->
+            {{ info.as_p }}
+        <div class="divfrm">
+            <button class="btnfrm">Send Message</button>
+        </div>
+    </form>
+    </div>
+</div>
+</body>
+</html>

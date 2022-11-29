@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Details :::::::</title>
+</head>
+<body>
+<h1>Details : </h1>
+<table>
+    <thead>
+    <th>Name : </th>
+    <th>Phone No. </th>
+    <th>address : </th>
+    <th>Comments : </th>
+    <th>ID:</th>
+    </thead>
+    <tbody>
+    {% for i in info %}
+        <tr>
+    <td>{{ i.name }}</td>
+    <td>{{ i.phone }}</td>
+    <td>{{ i.address }}</td>
+    <td>{{ i.comments }}</td>
+    <td>{{ i.id }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

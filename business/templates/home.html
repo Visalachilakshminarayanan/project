@@ -1,0 +1,359 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+<link rel="stylesheet" href="{% static 'css/mains.css' %}">
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://fontawesome.com/v4/icon/facebook-square">
+
+    </head>
+<body>
+
+
+    <div class="menu">
+        <ul class="menulist">
+        <li><a href="#">Home</a></li>
+        <li><a href="about">About</a></li>
+         <li><a href="#product">Product</a></li>
+        <li><a href="contact">Contact</a></li>
+         <!--<li><a href="contact.html"><i class="fa fa-shopping-cart"></i></a> </li>-->
+           <li class="search-inp"><input type="text" id="search" autofocus></li>
+         <li><button id="search-item" style="color:white;font-size:16px;font-weight:bold;cursor:pointer;">Search</button></li>
+        </ul>
+        <img src="{% static 'images/new-logo.png'  %}">
+        <h1>GVM EXPORTS</h1>
+    </div>
+
+
+<div class="imgbanner">
+  <img src="{% static 'images/banana-plant.jpg'  %}">
+    <div class="borderdesign">
+        <h3>If Food is getting served on a Banana Leaf,<br>
+            That means, You are in South India!!
+        </h3>
+    </div>
+    <div class="btnoptions">
+          <button class="morebtns"><i class="fa fa-phone" aria-hidden="true" style="font-size:22px"></i> +91 6380504818</button>
+        <button class="orderbtns" onclick = "orderlink();"> Order now</button>
+    </div>
+
+</div>
+
+<div class="big">
+
+        <div class="i1">
+            <img src="{% static 'images/png image/banana.png' %}">
+            <img src="{% static 'images/png image/banana.png' %}">
+        </div>
+
+        <div class="i2">
+            <img src="{% static 'images/png image/a.png' %}">
+            <img src="{% static 'images/png image/a.png' %}">
+        </div>
+
+        <div class="i3">
+                        <img src="{% static 'images/png image/banana1.png' %}">
+
+                        <img src="{% static 'images/png image/banana1.png' %}">
+
+        </div>
+<!--<div class="i4">
+             <img src="D:\WEBSITE PROJECT\png image\banana flower.png">
+             <img src="D:\WEBSITE PROJECT\png image\banana flower.png">
+        </div>-->
+</div>
+
+
+
+        <div class="box">
+            <div class="pngimg">
+                            <img src="{% static 'images/tr.png' %}">
+
+                <div class="head">
+                    <h4 >Banana Leaf & <br> Banana Tree</h4>
+                </div>
+
+                <div class="title">
+                    <h5>we provide the farm-fresh banana leaf with any size </h5>
+                </div>
+
+                <div class="btn">
+                    <a href="#product"> <button>Explore More  <<</button></a>
+                </div>
+
+            </div>
+
+            <div class="pngimg">
+                            <img src="{% static 'images/flow.png' %}">
+
+                <div class="head">
+                    <h4 >Banana Flower</h4>
+                </div>
+                <div class="title">
+                    <h5>we provide fresh banana flower </h5>
+                </div>
+                <div class="btn">
+                    <a href="#product">  <button  style="margin-top:45px">Explore More <<</button></a>
+                </div>
+            </div>
+
+            <div class="pngimg">
+                            <img src="{% static 'images/fr.png' %}">
+
+                <div class="head">
+                    <h4>Banana Fruit</h4>
+                </div>
+                <div class="title">
+                    <h5>we stock the variety rich banana fruit</h5>
+                </div>
+                <div class="btn">
+                    <a href="#product"> <button style="margin-top:25px">Explore More << </button></a>
+                </div>
+            </div>
+        </div>
+
+
+<div class="video">
+    <img src="{% static 'images/bg.webp' %}">
+    <div class="ordernow">
+        <h4 style="color:orangered;font-size:50px;margin-top:-55px">You deserve the very best</h4>
+        <h3 style="color:rgb(13, 0, 255);font-size:50px;margin-top:-55px"> Order Now!</h3> <br>
+        <h2 style="color:white;font-size:50px;margin-top:-55px">916380504818  |  916381212066</h2>
+    </div>
+     <div class="play">
+        <a href="play"><img src="{% static 'images/png image/imge.png' %}"></a>
+    </div>
+</div>
+
+<div class="main">
+<div class="imagelist" id="product">
+
+        <button class="imgfilter active" onclick="filterSelection('All')">All</button>
+        <button class="imgfilter" onclick="filterSelection('Leaf')">Banana Leaf</button>
+        <button class="imgfilter" onclick="filterSelection('Flower')">Banana Flower</button>
+        <button class="imgfilter" onclick="filterSelection('Tree')">Banana Tree</button>
+        <button class="imgfilter" onclick="filterSelection('Fruits')">Banana fruit</button>
+
+</div>
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+    <div class="column LEAF">
+      <div class="content">
+        <img src="{% static 'images/png image/a.png' %}">
+        <div class="order">
+          <div class="cart">
+            <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="column TREE">
+      <div class="content">
+          <img src="{% static 'images/png image/tre.png' %}" style="width:160px;height:170px">
+     <div class="order">
+          <div class="cart">
+            <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="column FLOWER">
+      <div class="content">
+        <img src="{% static 'images/png image/banana flower.png' %}">
+        <div class="order">
+          <div class="cart">
+            <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="column FLOWER">
+      <div class="content">
+        <img src="{% static 'images/png image/flo1.png' %}">
+        <div class="order">
+          <div class="cart">
+            <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+          </div>
+       </div>
+      </div>
+    </div>
+
+    <div class="column FRUITS">
+      <div class="content">
+        <img src="{% static 'images/png image/pulli vazhai.png' %}">
+        <div class="order">
+          <div class="cart">
+            <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="column FRUITS">
+      <div class="content">
+        <img src="{% static 'images/png image/banana.png' %}">
+        <div class="order">
+          <div class="cart">
+            <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="column TREE">
+      <div class="content">
+        <img src="{% static 'images/png image/thandu.png' %}">
+        <div class="order">
+          <div class="cart">
+            <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+          </div>
+       </div>
+      </div>
+    </div>
+
+    <div class="column FLOWER">
+      <div class="content">
+        <img src="{% static 'images/png image/group.png' %}">
+        <div class="order">
+          <div class="cart">
+            <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="column FRUITS">
+      <div class="content">
+        <img src="{% static 'images/png image/yelakki.png' %}">
+        <div class="order">
+          <div class="cart">
+            <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="column FRUITS">
+      <div class="content">
+        <img src="{% static 'images/png image/vaazhai kolai.png' %}">
+        <div class="order">
+          <div class="cart">
+            <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="column LEAF">
+        <div class="content">
+            <img src="{% static 'images/png image/leaf1.png' %}">
+            <div class="order">
+              <div class="cart">
+                <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+              </div>
+           </div>
+        </div>
+      </div>
+      <div class="column LEAF">
+        <div class="content">
+            <img src="{% static 'images/png image/leaf2.png' %}" >
+            <div class="order">
+              <div class="cart">
+                <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+              </div>
+           </div>
+        </div>
+      </div>
+      <div class="column LEAF">
+        <div class="content">
+            <img src="{% static 'images/png image/leaf3.png' %}" >
+            <div class="order">
+              <div class="cart">
+                <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+              </div>
+           </div>
+        </div>
+      </div>
+      <div class="column LEAF">
+        <div class="content">
+            <img src="{% static 'images/png image/leaf4.png' %}" >
+            <div class="order">
+              <div class="cart">
+                <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+              </div>
+           </div>
+        </div>
+      </div>
+      <div class="column TREE">
+        <div class="content">
+            <img src="{% static 'images/png image/tr.png' %}" >
+            <div class="order">
+              <div class="cart">
+                <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+              </div>
+           </div>
+        </div>
+      </div>
+      <div class="column TREE">
+        <div class="content">
+            <img src="{% static 'images/png image/all.png' %}">
+            <div class="order">
+              <div class="cart">
+                <a href="contact"><i class="fa fa-shopping-cart fa-5x"><h6> Order now</h6></i></a>
+              </div>
+           </div>
+        </div>
+      </div>
+  <!-- END GRID -->
+  </div>
+
+  <!-- END MAIN -->
+  </div>
+
+
+<div class="bottom" id="about">
+    <div class="intro">
+        <h3>GVM BANANA LEAF EXPORT SERVICE</h3>
+        When it comes to fresh leaf, <br>
+        banana tree, banana fruite & flower,<BR>
+        we are the preferred choice.<BR>
+        At Leafs & fruits,<BR>
+        we carefully source our wide range<BR>
+        of farm-fresh produce from our farms,<BR>
+        from select growers and markets daily.
+    </div>
+    <div class="address">
+        <h3 >CONTACT</h3>
+
+        KATTUCETTIPATTI,<BR>
+        RAYAKOTTAI TO DHARMAPURI(rode),<BR>
+        DHARMAPURI 635116.<BR>
+        TAMILNADU.
+    </div>
+    <div class="focus">
+        <h3>FOCUS LINKS</h3>
+        <li><a href="second website.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+         <li><a href="#product">Product</a></li>
+        <li><a href="contact">Contact</a></li>
+
+        <div class="socialicon">
+          <i class="fa fa-twitter-square" aria-hidden="true"></i>
+          <a href="http://www.facebook.com/vigneshgvm.vigneshgvm"> <i class="fa fa-facebook-square" aria-hidden="true" title="FACEBOOK"></i></a>
+         <a href="https://www.instagram.com/tv/ChMINsAOTYu/?utm_source=ig_web_copy_link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<script src="{% static 'js/mains.js' %}"></script>
+
+</body>
+
+</html>
